@@ -19,7 +19,7 @@ class Boss(QueueClient):
                 result = self.results.get()  # Get the result
                 results.append(result)
             except queue.Empty:
-                print("Queue de résultats vide, fin de la collecte.")
+                print("La queue du résultat est vide ")
                 break  # Exit the loop if the results queue is empty
         return results
 
@@ -29,6 +29,6 @@ if __name__ == "__main__":
     num_tasks = 10
     boss.submit_tasks(num_tasks)
 
-    print("Tâches soumises, collecte des résultats...")
+    print("Tâches envoyé, récupération des résultats...")
     results = boss.collect_results()
-    print(f"{len(results)} résultats collectés.")
+    print(f"{len(results)} résultats obtenue.")
