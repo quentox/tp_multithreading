@@ -61,10 +61,10 @@ def test_task_equality():
     b = Task.from_json(a_json)
     print("Task désérialisée.")
 
-    equal, diff_attr = a == b
+    equal, diff_equals = a == b
     if equal:
         print("Test réussi : La tache sérialisé et déserialisée sont égales.")
     else:
-        print(f"Test échoué : Différence détectée dans l'attribut '{diff_attr}'.")
+        print(f"Test échoué : Différence détectée dans l'attribut '{diff_equals}'.")
 
 test_task_equality()
