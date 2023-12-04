@@ -13,7 +13,7 @@ class Proxy(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        t = self.client.results.get()
+        t = self.client.tasks.get()
         self.wfile.write(bytes(t.to_json(), "utf-8"))
 
 

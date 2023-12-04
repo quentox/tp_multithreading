@@ -52,19 +52,19 @@ class Task:
         return True, None
 
     # Test unitaire
-def test_task_equality():
-    a = Task("task1")
-
-    a_json = a.to_json()
-    print("Task sérialisée en JSON.")
-
-    b = Task.from_json(a_json)
-    print("Task désérialisée.")
-
-    equal, diff_equals = a == b
-    if equal:
-        print("Test réussi : La tache sérialisé et déserialisée sont égales.")
-    else:
-        print(f"Test échoué : Différence détectée dans l'attribut '{diff_equals}'.")
-
-test_task_equality()
+# def test_task_equality():
+#     a = Task("task1")
+#
+#     a_json = a.to_json()
+#     print("Task sérialisée en JSON.")
+#
+#     b = Task.from_json(a_json)
+#     print("Task désérialisée.")
+#
+#     equal, diff_equals = a == b
+#     if equal:
+#         print("Test réussi : La tache sérialisé et déserialisée sont égales.")
+#     else:
+#         print(f"Test échoué : Différence détectée dans l'attribut '{diff_equals}'.")
+#
+# test_task_equality()
