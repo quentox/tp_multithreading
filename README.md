@@ -44,15 +44,15 @@ Lancez autant de serveurs que nécessaire :
 ## Exécution des Composants et Accès aux résultats des Tâches par proxy
 Lancez tout d'abord :
 
-``` python src/manager.py ```
+``` python manager.py ```
 
 Lancez un boss pour ajouter une tâche dans la file d'attente :
 
-``` python src/boss.py ```
+``` python boss.py ```
 
 Lancez un seul proxy :
 
-``` python src/proxy.py ```
+``` python proxy.py ```
 
 Vous pouvez accéder à la première tâche de la file d'attente via un navigateur Web en utilisant l'URL : https://localhost:8000
 
