@@ -1,61 +1,64 @@
-# TP Multithreading
-Le TP Multithreading est un projet pratique conçu pour explorer en profondeur le multithreading ainsi que l'utilisation de Git, à travers l'implémentation de solutions en Python et en C++.
+# Multithreading Project
+The Multithreading Project is a practical endeavor designed to delve deep into multithreading and Git usage, through the implementation of solutions in Python and C++.
 
-## Description du Projet
-Ce projet présente une application de gestion de tâches qui repose sur une architecture de file d'attente. Les éléments centraux de cette application sont les suivants :
+## Project Description
+This project presents a task management application based on a queue architecture. The central elements of this application are as follows:
 
-**Boss** : Il crée des tâches et les place dans une file d'attente.
+**Boss** : It creates tasks and places them in a queue.
 
-**Task (Tâche)** : Représente une unité de travail.
-**Minion** : Récupère des tâches de la file d'attente, les exécutes et envoie les résultats.
+**Task (Tâche)** : Represents a unit of work.
 
-## Structure du Projet
-**Boss.py** : Contient la classe Boss responsable de la création et de l'ajout de tâches dans la file d'attente.
+**Minion** : Retrieves tasks from the queue, executes them, and sends the results.
 
-**Manager.py** : Introduit la classe QueueManager qui supervise la file d'attente, ainsi que la classe QueueClient employée pour interagir avec celle-ci.
+## Project Structure
+**Boss.py** : Contains the Boss class responsible for creating and adding tasks to the queue.
 
-**Minion.py** : Contient la classe Minion, responsable de l'extraction des tâches de la file d'attente, de leur exécution et de l'envoi des résultats.
+**Manager.py** : Introduces the QueueManager class which supervises the queue, as well as the QueueClient class used to interact with it.
 
-**Task.py** : Implémente la classe Task, décrivant une tâche avec des procédures de travail et de conversion JSON.
+**Minion.py** : Contains the Minion class, responsible for fetching tasks from the queue, executing them, and sending the results.
 
-**Proxy.py** : Propose un serveur proxy basique qui présente une tâche de la file d'attente sous forme JSON lorsqu'une requête HTTP GET est reçue.
+**Task.py** : Implements the Task class, describing a task with work procedures and JSON conversion.
 
-**Low_level.cpp** : Un script C++ accomplissant une tâche grâce à la bibliothèque Eigen, récupérant une tâche de la file d'attente via le proxy.
+**Proxy.py** : Provides a basic proxy server that presents a task from the queue in JSON format when an HTTP GET request is received.
 
-## Dépendances
-**Python**
+**Low_level.cpp** : A C++ script accomplishing a task using the Eigen library, fetching a task from the queue via the proxy.
+
+## Dependencies
 - Python 3
 - Numpy
 - C++
 
-## Exécution de la Partie Python
-Lancez tout d'abord :
+## Running Python Part
+First, run:
 
 ``` python manager.py  ```
 
-Puis lancez un boss pour ajouter une tâche dans la file d'attente :
+Then, run a boss to add a task to the queue:
 
 ``` python boss.py ```
 
-Lancez autant de serveurs que nécessaire :
+Launch as many servers as needed:
 
 ``` python minion.py ```
 
-## Exécution des Composants et Accès aux résultats des Tâches par proxy
-Lancez tout d'abord :
+## Running Components and Accessing Task Results via Proxy
+First, run:
 
 ``` python manager.py ```
 
-Lancez un boss pour ajouter une tâche dans la file d'attente :
+Run a boss to add a task to the queue:
 
 ``` python boss.py ```
 
-Lancez un seul proxy :
+Launch a single proxy:
 
 ``` python proxy.py ```
 
-Vous pouvez accéder à la première tâche de la file d'attente via un navigateur Web en utilisant l'URL : https://localhost:8000
+You can access the first task in the queue via a web browser using the URL: https://localhost:8000
 
-## Partie C++
+## C++ Part
 
-J'ai atteint l'étape d'implémentation du modèle Boss-Minion en C++, cependant, j'ai rencontré des complications liées à CMAKE. Malgré cela, je vous ai tout de même fourni le code pour low_level.cpp.
+I reached the implementation stage of the Boss-Minion model in C++, however, I encountered complications with CMAKE. Nevertheless, I have still provided you with the code for low_level.cpp.
+
+
+
