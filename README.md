@@ -31,28 +31,40 @@ This project presents a task management application based on a queue architectur
 ## Running Python Part
 First, run:
 
-``` python manager.py  ```
+```
+python manager.py
+```
 
 Then, run a boss to add a task to the queue:
 
-``` python boss.py ```
+``` 
+python boss.py
+```
 
 Launch as many servers as needed:
 
-``` python minion.py ```
+```
+python minion.py
+```
 
 ## Running Components and Accessing Task Results via Proxy
 First, run:
 
-``` python manager.py ```
+```
+python manager.py
+```
 
 Run a boss to add a task to the queue:
 
-``` python boss.py ```
+```
+python boss.py
+```
 
 Launch a single proxy:
 
-``` python proxy.py ```
+```
+python proxy.py
+```
 
 You can access the first task in the queue via a web browser using the URL: https://localhost:8000
 
